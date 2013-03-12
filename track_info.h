@@ -40,6 +40,7 @@ struct track_info {
 	int discnumber;
 	int date;
 	int originaldate;
+	int rating;
 	double rg_track_gain;
 	double rg_track_peak;
 	double rg_album_gain;
@@ -86,6 +87,7 @@ typedef size_t sort_key_t;
 #define SORT_CODEC         offsetof(struct track_info, codec)
 #define SORT_CODEC_PROFILE offsetof(struct track_info, codec_profile)
 #define SORT_MEDIA         offsetof(struct track_info, media)
+#define SORT_RATING        offsetof(struct track_info, rating)
 #define SORT_INVALID       ((sort_key_t) (-1))
 
 #define TI_MATCH_ARTIST       (1 << 0)

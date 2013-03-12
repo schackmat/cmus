@@ -72,6 +72,7 @@ void track_info_set_comments(struct track_info *ti, struct keyval *comments) {
 	ti->albumsort = keyvals_get_val(comments, "albumsort");
 	ti->is_va_compilation = track_is_va_compilation(comments);
 	ti->media = keyvals_get_val(comments, "media");
+	ti->rating = comments_get_int(comments, "rating");
 
 	if (ti->artist == NULL && ti->albumartist != NULL) {
 		/* best guess */
